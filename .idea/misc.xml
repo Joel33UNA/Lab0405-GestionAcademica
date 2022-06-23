@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Public/Programas/Lab0405-Frontend/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Public/Programas/Lab0405-Frontend/app/src/main/res/layout/content_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Public/Programas/Lab0405-Frontend/app/src/main/res/layout/fragment_carreras.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Public/Programas/Lab0405-Frontend/app/src/main/res/layout/fragment_ciclos.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Public/Programas/Lab0405-Frontend/app/src/main/res/layout/fragment_historial_academico.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Public/Programas/Lab0405-Frontend/app/src/main/res/layout/list_carreras.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Public/Programas/Lab0405-Frontend/app/src/main/res/layout/list_ciclos.xml" value="0.5" />
+        <entry key="..\:/Users/Public/Programas/Lab0405-Frontend/app/src/main/res/layout/list_cursos.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Public/Programas/Lab0405-Frontend/app/src/main/res/layout/list_estudiantes.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Public/Programas/Lab0405-Frontend/app/src/main/res/layout/list_historial.xml" value="0.25" />
+        <entry key="..\:/Users/Public/Programas/Lab0405-Frontend/app/src/main/res/layout/list_matriculas.xml" value="0.1" />
+        <entry key="..\:/Users/flore/Desktop/PeopleApp/app/src/main/res/layout/activity_main.xml" value="0.33106884057971014" />
+        <entry key="..\:/Users/flore/Desktop/PeopleApp/app/src/main/res/layout/content_main.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/flore/Desktop/PeopleApp/app/src/main/res/layout/fragment_about.xml" value="0.3473731884057971" />
+        <entry key="..\:/Users/flore/Desktop/PeopleApp/app/src/main/res/layout/fragment_create_person.xml" value="0.264" />
+        <entry key="..\:/Users/flore/Desktop/PeopleApp/app/src/main/res/layout/fragment_home.xml" value="0.315625" />
+        <entry key="..\:/Users/flore/Desktop/PeopleApp/app/src/main/res/layout/fragment_personas.xml" value="0.2604166666666667" />
+        <entry key="..\:/Users/flore/Desktop/PeopleApp/app/src/main/res/layout/navigation_header.xml" value="0.3859375" />
+        <entry key="..\:/Users/flore/Desktop/PeopleApp/app/src/main/res/layout/templatepersonas.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/flore/Desktop/PeopleApp/app/src/main/res/menu/navigation_menu.xml" value="0.4015625" />
+        <entry key="..\:/Users/flore/Documents/GitHub/Moviles_UIExamples/PeopleApp/app/src/main/res/drawable-v21/custom_ripple.xml" value="0.30104166666666665" />
+        <entry key="..\:/Users/flore/Documents/GitHub/Moviles_UIExamples/PeopleApp/app/src/main/res/drawable/background.xml" value="0.40208333333333335" />
+        <entry key="..\:/Users/flore/Documents/GitHub/Moviles_UIExamples/PeopleApp/app/src/main/res/drawable/custom_button.xml" value="0.32395833333333335" />
+        <entry key="..\:/Users/flore/Documents/GitHub/Moviles_UIExamples/PeopleApp/app/src/main/res/drawable/custom_image_button.xml" value="0.37962962962962965" />
+        <entry key="..\:/Users/flore/Documents/GitHub/Moviles_UIExamples/PeopleApp/app/src/main/res/drawable/custom_ripple.xml" value="0.30104166666666665" />
+        <entry key="..\:/Users/flore/Documents/GitHub/Moviles_UIExamples/PeopleApp/app/src/main/res/drawable/ic_baseline_emoji_people_24.xml" value="0.325" />
+        <entry key="..\:/Users/flore/Documents/GitHub/Moviles_UIExamples/PeopleApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.403125" />
+        <entry key="..\:/Users/flore/Documents/GitHub/Moviles_UIExamples/PeopleApp/app/src/main/res/drawable/nav_item_background.xml" value="0.40208333333333335" />
+        <entry key="..\:/Users/flore/Documents/GitHub/Moviles_UIExamples/PeopleApp/app/src/main/res/drawable/nav_item_text.xml" value="0.40208333333333335" />
+        <entry key="..\:/Users/flore/Documents/GitHub/Moviles_UIExamples/PeopleApp/app/src/main/res/layout/activity_login.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/flore/Documents/GitHub/Moviles_UIExamples/PeopleApp/app/src/main/res/layout/activity_main.xml" value="0.2753623188405797" />
+        <entry key="..\:/Users/flore/Documents/GitHub/Moviles_UIExamples/PeopleApp/app/src/main/res/layout/content_main.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/flore/Documents/GitHub/Moviles_UIExamples/PeopleApp/app/src/main/res/layout/fragment_about.xml" value="0.33016304347826086" />
+        <entry key="..\:/Users/flore/Documents/GitHub/Moviles_UIExamples/PeopleApp/app/src/main/res/layout/fragment_create_person.xml" value="0.264" />
+        <entry key="..\:/Users/flore/Documents/GitHub/Moviles_UIExamples/PeopleApp/app/src/main/res/layout/fragment_home.xml" value="0.33016304347826086" />
+        <entry key="..\:/Users/flore/Documents/GitHub/Moviles_UIExamples/PeopleApp/app/src/main/res/layout/fragment_personas.xml" value="0.264" />
+        <entry key="..\:/Users/flore/Documents/GitHub/Moviles_UIExamples/PeopleApp/app/src/main/res/layout/navigation_header.xml" value="0.67" />
+        <entry key="..\:/Users/flore/Documents/GitHub/Moviles_UIExamples/PeopleApp/app/src/main/res/layout/templatepersonas.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/flore/Documents/GitHub/Moviles_UIExamples/PeopleApp/app/src/main/res/menu/navigation_menu.xml" value="0.4015625" />
+        <entry key="..\:/Users/joeli/.gradle/caches/transforms-3/133a29d618ea2862262cd3306defdfcd/transformed/appcompat-1.4.2/res/layout/support_simple_spinner_dropdown_item.xml" value="0.22554347826086957" />
+        <entry key="..\:/Users/joeli/Desktop/Lab0405-Frontend/app/src/main/res/layout/fragment_carreras.xml" value="0.33" />
+        <entry key="..\:/Users/joeli/Desktop/Lab0405-Frontend/app/src/main/res/layout/fragment_cursos.xml" value="0.23324275362318841" />
+        <entry key="..\:/Users/joeli/Desktop/Lab0405-Frontend/app/src/main/res/layout/fragment_matriculas.xml" value="0.23324275362318841" />
+        <entry key="..\:/Users/joeli/Desktop/Lab0405-Frontend/app/src/main/res/layout/fragment_oferta_academica.xml" value="0.33" />
+        <entry key="..\:/Users/joeli/Desktop/Lab0405-Frontend/app/src/main/res/layout/fragment_profesores.xml" value="0.25679347826086957" />
+        <entry key="..\:/Users/joeli/Desktop/Lab0405-Frontend/app/src/main/res/layout/list_carreras.xml" value="0.33" />
+        <entry key="..\:/Users/joeli/Desktop/Lab0405-Frontend/app/src/main/res/layout/list_ciclos.xml" value="0.25679347826086957" />
+        <entry key="..\:/Users/joeli/Desktop/Lab0405-Frontend/app/src/main/res/layout/list_cursos.xml" value="0.17395833333333333" />
+        <entry key="..\:/Users/joeli/Desktop/Lab0405-Frontend/app/src/main/res/layout/list_grupos.xml" value="0.23324275362318841" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.36875" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/drawable/background.xml" value="0.36875" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/drawable/custom_image_button.xml" value="0.36875" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/drawable/custom_ripple.xml" value="0.36875" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.36875" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.36875" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.36875" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/drawable/ic_baseline_emoji_people_24.xml" value="0.36875" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/drawable/ic_event_black_24dp.xml" value="0.36875" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/drawable/ic_launcher_background.xml" value="0.36875" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/drawable/nav_item_background.xml" value="0.36875" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/drawable/nav_item_text.xml" value="0.36875" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/content_main.xml" value="0.25" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/fragment_carreras.xml" value="0.2916666666666667" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/fragment_ciclos.xml" value="0.1" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/fragment_create_person.xml" value="0.1" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/fragment_cursos.xml" value="0.33" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/fragment_estudiantes.xml" value="0.32155797101449274" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/fragment_informacion.xml" value="0.33" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/fragment_matriculas.xml" value="0.32155797101449274" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/fragment_personas.xml" value="0.1" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/fragment_profesores.xml" value="0.32155797101449274" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/list_carreras.xml" value="0.2916666666666667" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/list_ciclos.xml" value="0.33" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/list_cursos.xml" value="0.32155797101449274" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/list_estudiantes.xml" value="0.5" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/list_matriculas.xml" value="0.5" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/list_profesores.xml" value="0.5" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/navigation_header.xml" value="0.33" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/layout/templatepersonas.xml" value="0.33" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/menu/navigation_menu.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="jbr-11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
