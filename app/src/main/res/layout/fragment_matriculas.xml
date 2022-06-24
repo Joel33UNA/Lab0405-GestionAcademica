@@ -5,10 +5,19 @@
              android:layout_height="match_parent"
              tools:context=".Fragments.MatriculasFragment">
     <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="0dp"
-            android:layout_height="0dp" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="1dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="1dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="1dp" android:layout_marginEnd="1dp" app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/recyclerMatriculas"/>
+            android:layout_width="385dp"
+            android:layout_height="501dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/recyclerMatriculas"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="22dp"
+            android:layout_marginTop="65dp" app:layout_constraintTop_toBottomOf="@+id/searchMatriculas"/>
+    <SearchView
+            android:layout_width="405dp"
+            android:layout_height="64dp"
+            android:id="@+id/searchMatriculas"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="38dp" android:layout_marginBottom="61dp"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerMatriculas" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="3dp" android:layout_marginEnd="3dp" app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

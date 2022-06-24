@@ -5,10 +5,20 @@
                                                    android:layout_height="match_parent"
                                                    tools:context=".Fragments.CarrerasFragment">
     <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="0dp"
-            android:layout_height="0dp" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="1dp" android:layout_marginEnd="1dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="1dp"
+            android:layout_width="401dp"
+            android:layout_height="495dp"
+            android:layout_marginEnd="1dp" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="1dp"
-            android:id="@+id/recyclerHistorialAcademico"/>
+            android:id="@+id/recyclerHistorialAcademico"
+            app:layout_constraintHorizontal_bias="0.117" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="41dp" android:layout_marginTop="34dp"
+            app:layout_constraintTop_toBottomOf="@+id/searchHistorial"/>
+    <SearchView
+            android:layout_width="404dp"
+            android:layout_height="56dp"
+            android:id="@+id/searchHistorial"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="96dp" android:layout_marginBottom="39dp"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerHistorialAcademico"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="2dp"
+            android:layout_marginEnd="5dp" app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

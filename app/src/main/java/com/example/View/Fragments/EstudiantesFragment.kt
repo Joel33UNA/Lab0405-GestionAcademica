@@ -103,7 +103,7 @@ class EstudiantesFragment : Fragment() {
                     ciclosLiveData!!.value = response
                 }
             }else{
-                Toast.makeText(context!!, "Error al mostrar los ciclos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context!!, "Error al mostrar los estudiantes", Toast.LENGTH_SHORT).show()
             }
         }
     }

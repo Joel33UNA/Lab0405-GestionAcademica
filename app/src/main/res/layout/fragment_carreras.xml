@@ -5,10 +5,20 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.CarrerasFragment">
     <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="0dp"
-            android:layout_height="0dp" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="1dp" android:layout_marginEnd="1dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="1dp"
+            android:layout_width="410dp"
+            android:layout_height="497dp"
+            android:layout_marginEnd="1dp" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="1dp"
-            android:id="@+id/recyclerCarreras"/>
+            android:id="@+id/recyclerCarreras"
+            android:layout_marginTop="41dp" app:layout_constraintTop_toBottomOf="@+id/searchCarreras"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="26dp"/>
+    <SearchView
+            android:layout_width="403dp"
+            android:layout_height="61dp"
+            android:id="@+id/searchCarreras" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="44dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="1dp"
+            android:layout_marginEnd="7dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginBottom="41dp"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerCarreras"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

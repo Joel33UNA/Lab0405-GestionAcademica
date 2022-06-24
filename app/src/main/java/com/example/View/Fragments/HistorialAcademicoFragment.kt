@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
 import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.lifecycle.MutableLiveData
@@ -16,18 +17,18 @@ import com.example.Data.MatriculaApi
 import com.example.View.Adapter.CarreraAdapter
 import com.example.View.Adapter.HistorialAdapter
 import com.example.View.R
-import com.example.lab04_frontend.Logica.Carrera
-import com.example.lab04_frontend.Logica.IPAddress
-import com.example.lab04_frontend.Logica.Matricula
-import com.example.lab04_frontend.Logica.Usuario
+import com.example.lab04_frontend.Logica.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.*
+import kotlin.collections.ArrayList
 
 class HistorialAcademicoFragment : Fragment() {
+    private var allHistorial = ArrayList<Matricula>()
     private var listaHistorial = ArrayList<Matricula>()
     private lateinit var historialLiveData: MutableLiveData<List<Matricula>>
     private lateinit var historialAdapter: HistorialAdapter
@@ -36,17 +37,46 @@ class HistorialAcademicoFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_historial_academico, container, false)
-    }
+        val view = inflater.inflate(R.layout.fragment_historial_academico, container, false)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+        //super.onCreate(savedInstanceState)
         this.usuario = activity!!.intent.extras!!.getSerializable("Usuario") as Usuario
         this.historialLiveData = MutableLiveData<List<Matricula>>()
         this.historialAdapter = HistorialAdapter(listaHistorial, context!!)
 
         initHistorial()
         observer()
+
+        val searchView = view!!.findViewById<SearchView>(R.id.searchHistorial)
+        searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
+
+            val auxHistorial = ArrayList<Matricula>()
+
+            override fun onQueryTextSubmit(p0: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(p0: String?): Boolean {
+                val searchText = p0!!.toLowerCase(Locale.getDefault())
+                if(searchText.isNotEmpty()) {
+                    auxHistorial.clear()
+                    allHistorial.forEach{
+                        if(it.grupo!!.curso!!.nombre.toString().toLowerCase(Locale.getDefault()).contains(searchText)){
+                            auxHistorial.add(it)
+                        }
+                    }
+                    historialLiveData!!.value = auxHistorial
+                }
+                else{
+                    auxHistorial.clear()
+                    auxHistorial.addAll(allHistorial)
+                    historialLiveData.value = auxHistorial
+                }
+                return false
+            }
+        })
+
+        return view
     }
 
     private fun initHistorial() {
@@ -60,6 +90,7 @@ class HistorialAcademicoFragment : Fragment() {
             val response = request?.body() as ArrayList<Matricula>
             if(request.isSuccessful){
                 withContext(Dispatchers.Main) {
+                    allHistorial = response
                     historialLiveData!!.value = response
                 }
             }else{
