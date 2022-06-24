@@ -13,13 +13,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import com.example.Data.EstudianteApi
 import com.example.Data.ProfesorApi
-import com.example.View.Adapter.ProfesorAdapter
 import com.example.View.R
 import com.example.lab04_frontend.Logica.Estudiante
 import com.example.lab04_frontend.Logica.IPAddress
 import com.example.lab04_frontend.Logica.Profesor
 import com.example.lab04_frontend.Logica.Usuario
-import kotlinx.android.synthetic.main.fragment_informacion.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -122,13 +120,13 @@ class InformacionFragment : Fragment() {
 
     private fun updateView() {
         val textViewCedula = view!!.findViewById<TextView>(R.id.textViewCedulaText)
-        val textViewNombre = view!!.findViewById<TextView>(R.id.textViewNombre)
+        val textViewNombre = view!!.findViewById<TextView>(R.id.textViewCedula)
         val textViewTelefono = view!!.findViewById<TextView>(R.id.textViewTelefono)
         val textViewCorreo = view!!.findViewById<TextView>(R.id.textViewCorreo)
         val textViewFechaNacimiento = view!!.findViewById<TextView>(R.id.textViewFechaNacimiento)
         val textViewFechaNacimientoText = view!!.findViewById<TextView>(R.id.textViewFechaNacimientoText)
         val textViewCarreraText = view!!.findViewById<TextView>(R.id.textViewCarreraText)
-        val textViewCarrera = view!!.findViewById<TextView>(R.id.textViewCarrera)
+        val textViewCarrera = view!!.findViewById<TextView>(R.id.textViewCedula)
         val textViewTituloCarreraText = view!!.findViewById<TextView>(R.id.textViewTituloCarreraText)
         val textViewTituloCarrera = view!!.findViewById<TextView>(R.id.textViewTituloCarrera)
 

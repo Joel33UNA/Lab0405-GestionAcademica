@@ -18,11 +18,9 @@ import com.example.Data.CicloApi
 import com.example.Data.EstudianteApi
 import com.example.View.Adapter.EstudianteAdapter
 import com.example.View.R
-import com.example.lab04_frontend.Logica.Carrera
 import com.example.lab04_frontend.Logica.Ciclo
 import com.example.lab04_frontend.Logica.Estudiante
 import com.example.lab04_frontend.Logica.IPAddress
-import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -155,11 +153,12 @@ class EstudiantesFragment : Fragment() {
             @Override
             override fun onChanged(@Nullable estudiante: Estudiante) {
                 var estudiante = estudiante as Estudiante
-                val matricular = MatricularFragment()
+                val matricular = GruposMatriculaFragment()
+                val spinnerCiclo = view!!.findViewById<Spinner>(R.id.spinnerCiclos)
+                val ciclo = spinnerCiclo.selectedItem as Ciclo
                 var bundle =  Bundle();
-                val gson = Gson()
-                var json = gson.toJson(estudiante)
-                bundle.putString("Estudiante", json)
+                bundle.putSerializable("Estudiante", estudiante)
+                bundle.putSerializable("Ciclo", ciclo)
                 matricular.arguments=bundle
                 activity!!.supportFragmentManager.beginTransaction().replace(R.id.fragment_container, matricular).commit()
             }
@@ -181,5 +180,6 @@ class EstudiantesFragment : Fragment() {
         recyclerView.setHasFixedSize(true)
         recyclerView.setLayoutManager(LinearLayoutManager(context!!))
         recyclerView.adapter = estudianteAdapter
+        observerEstudianteUnico()
     }
 }

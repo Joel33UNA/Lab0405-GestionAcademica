@@ -13,7 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textViewTituloCarreraText"
             android:textSize="24sp"
-            app:layout_constraintTop_toBottomOf="@+id/textViewCarrera"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCedula"
             android:layout_marginTop="40dp" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/textViewTituloCarrera"/>
@@ -46,7 +46,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textViewFechaNacimiento"
             android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginBottom="1dp" app:layout_constraintBottom_toTopOf="@+id/textViewCarrera"/>
+            android:layout_marginBottom="1dp" app:layout_constraintBottom_toTopOf="@+id/textViewCedula"/>
     <TextView
             android:text="Nombre"
             android:textStyle="bold"
@@ -56,7 +56,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textViewCedulaText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/textViewNombre" android:layout_marginTop="20dp"/>
+            app:layout_constraintBottom_toTopOf="@+id/textViewCedula" android:layout_marginTop="20dp"/>
     <TextView
             android:text="Cédula"
             android:textStyle="bold"
@@ -72,7 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textViewTelefonoText"
             android:textSize="24sp"
-            app:layout_constraintTop_toBottomOf="@+id/textViewNombre"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCedula"
             android:layout_marginTop="20dp" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/textViewTelefono"/>
@@ -87,7 +87,7 @@
     <TextView
             android:text="Nombre"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textViewNombre"
+            android:layout_height="wrap_content" android:id="@+id/textViewCedula"
             app:layout_constraintTop_toBottomOf="@+id/textViewNombreText"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/textViewTelefonoText"/>
@@ -116,7 +116,7 @@
     <TextView
             android:text="Carrera"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textViewCarrera"
+            android:layout_height="wrap_content" android:id="@+id/textViewCedula"
             app:layout_constraintTop_toBottomOf="@+id/textViewCarreraText" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/textViewTituloCarreraText"/>
