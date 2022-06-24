@@ -1,10 +1,9 @@
 package com.example.View.Fragments
 
 import android.os.Bundle
+import android.view.*
+import android.widget.SearchView
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.lifecycle.MutableLiveData
@@ -22,29 +21,57 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.*
+import kotlin.collections.ArrayList
 
 class CiclosFragment : Fragment() {
 
+    private var allCiclos = ArrayList<Ciclo>()
     private var listaCiclos = ArrayList<Ciclo>()
     private lateinit var ciclosLiveData: MutableLiveData<List<Ciclo>>
     private lateinit var cicloAdapter: CicloAdapter
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        this.ciclosLiveData = MutableLiveData<List<Ciclo>>()
-        this.cicloAdapter = CicloAdapter(listaCiclos, context!!)
-
-        initCiclos()
-        observer()
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ciclos, container, false)
+        val view = inflater.inflate(R.layout.fragment_ciclos, container, false)
+
+        this.ciclosLiveData = MutableLiveData<List<Ciclo>>()
+        this.cicloAdapter = CicloAdapter(listaCiclos, context!!)
+        initCiclos()
+        observer()
+
+        val searchView = view!!.findViewById<SearchView>(R.id.searchViewCiclos)
+        searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
+
+            val auxCiclos = ArrayList<Ciclo>()
+
+            override fun onQueryTextSubmit(p0: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(p0: String?): Boolean {
+                val searchText = p0!!.toLowerCase(Locale.getDefault())
+                if(searchText.isNotEmpty()) {
+                    auxCiclos.clear()
+                    allCiclos.forEach{
+                        if(it.anio.toString().toLowerCase(Locale.getDefault()).contains(searchText)){
+                            auxCiclos.add(it)
+                        }
+                    }
+                    ciclosLiveData!!.value = auxCiclos
+                }
+                else{
+                    auxCiclos.clear()
+                    auxCiclos.addAll(allCiclos)
+                    ciclosLiveData.value = auxCiclos
+                }
+                return false
+            }
+        })
+
+        return view
     }
 
     private fun observer() {
@@ -69,7 +96,8 @@ class CiclosFragment : Fragment() {
             val response = request.body() as ArrayList<Ciclo>
             if(request.isSuccessful){
                 withContext(Dispatchers.Main) {
-                  ciclosLiveData!!.value = response
+                    allCiclos = response
+                    ciclosLiveData!!.value = response
                 }
             }else{
                 Toast.makeText(context!!, "Error al mostrar los ciclos", Toast.LENGTH_SHORT).show()

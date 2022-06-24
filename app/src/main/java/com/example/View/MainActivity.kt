@@ -149,10 +149,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
-    private fun setToolbarTitle(title:String){
+    fun setToolbarTitle(title:String){
         supportActionBar?.title = title
     }
-    private fun changeFragment(fragment: Fragment){
+    fun changeFragment(fragment: Fragment){
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container, fragment).commit()
 
     }

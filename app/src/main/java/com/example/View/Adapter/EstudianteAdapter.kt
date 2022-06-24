@@ -4,8 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.example.View.R
 import com.example.lab04_frontend.Logica.Curso
@@ -15,16 +17,19 @@ import org.w3c.dom.Text
 class EstudianteAdapter(var estudiantes: ArrayList<Estudiante>, var context: Context) :
     RecyclerView.Adapter<EstudianteAdapter.ViewHolder>(){
 
+    var estudianteLiveData: MutableLiveData<Estudiante>
+
     var inflater : LayoutInflater
 
     init {
         this.inflater = LayoutInflater.from(context)
+        this.estudianteLiveData = MutableLiveData()
     }
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EstudianteAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = inflater.inflate(R.layout.list_estudiantes, null)
-        return EstudianteAdapter.ViewHolder(view)
+        return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: EstudianteAdapter.ViewHolder, position: Int) {
@@ -35,23 +40,19 @@ class EstudianteAdapter(var estudiantes: ArrayList<Estudiante>, var context: Con
         return estudiantes.size
     }
 
-    class ViewHolder(var view: View) : RecyclerView.ViewHolder(view) {
+    fun getEstudiante(): MutableLiveData<Estudiante> {
+        return this.estudianteLiveData!!
+    }
 
-        private var nombreEstudiante: TextView
-        private var cedulaEstudiante: TextView
-        private var nombreCarrera: TextView
-        private var fechaNacimiento: TextView
-        private var telefonoEstudiante: TextView
-        private var correoEstudiante: TextView
+    inner class ViewHolder(var view: View) : RecyclerView.ViewHolder(view) {
 
-        init{
-            this.nombreEstudiante = view.findViewById(R.id.nombreEstudiante)
-            this.cedulaEstudiante = view.findViewById(R.id.cedulaEstudiante)
-            this.nombreCarrera = view.findViewById(R.id.nombreCarrera)
-            this.fechaNacimiento = view.findViewById(R.id.fechaNacimiento)
-            this.telefonoEstudiante = view.findViewById(R.id.telefonoEstudiante)
-            this.correoEstudiante = view.findViewById(R.id.correoEstudiante)
-        }
+        private var nombreEstudiante: TextView = view.findViewById(R.id.nombreEstudiante)
+        private var cedulaEstudiante: TextView = view.findViewById(R.id.cedulaEstudiante)
+        private var nombreCarrera: TextView = view.findViewById(R.id.nombreCarrera)
+        private var fechaNacimiento: TextView = view.findViewById(R.id.fechaNacimiento)
+        private var telefonoEstudiante: TextView = view.findViewById(R.id.telefonoEstudiante)
+        private var correoEstudiante: TextView = view.findViewById(R.id.correoEstudiante)
+        var matricularBtn: Button = view.findViewById(R.id.matricularBtn)
 
         fun bindData(estudiante: Estudiante){
             this.nombreEstudiante.setText(estudiante.nombre.toString())
@@ -60,6 +61,7 @@ class EstudianteAdapter(var estudiantes: ArrayList<Estudiante>, var context: Con
             this.fechaNacimiento.setText(estudiante.fechaNacimiento)
             this.telefonoEstudiante.setText(estudiante.telefono.toString())
             this.correoEstudiante.setText(estudiante.email.toString())
+            this.matricularBtn.setOnClickListener {  estudianteLiveData.value = estudiante }
         }
     }
 }
