@@ -99,6 +99,12 @@
                     android:layout_marginTop="30dp"
                     android:layout_marginEnd="36dp"/>
         </RelativeLayout>
+        <Button
+                android:text="Detalle del grupo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:id="@+id/detalleBtn" android:backgroundTint="#00BCD4"/>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

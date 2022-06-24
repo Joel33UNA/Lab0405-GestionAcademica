@@ -17,4 +17,8 @@ class Profesor : Usuario{
         telefono = 0
         email = ""
     }
+
+    override fun toString(): String {
+        return "$nombre ${super.cedula}"
+    }
 }

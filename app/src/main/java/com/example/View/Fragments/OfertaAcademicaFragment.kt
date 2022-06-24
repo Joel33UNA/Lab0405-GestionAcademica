@@ -19,10 +19,7 @@ import com.example.Data.CicloApi
 import com.example.Data.GrupoApi
 import com.example.View.Adapter.GrupoAdapter
 import com.example.View.R
-import com.example.lab04_frontend.Logica.Carrera
-import com.example.lab04_frontend.Logica.Ciclo
-import com.example.lab04_frontend.Logica.Grupo
-import com.example.lab04_frontend.Logica.IPAddress
+import com.example.lab04_frontend.Logica.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -55,6 +52,7 @@ class OfertaAcademicaFragment : Fragment() {
         observerCarreras()
         initCiclos()
         observerCiclos()
+        observerGrupoUnico()
 
         val buscarOfertaAcademicaBtn = view!!.findViewById<Button>(R.id.buscarOfertaAcademicaBtn)
         buscarOfertaAcademicaBtn.setOnClickListener{
@@ -149,6 +147,20 @@ class OfertaAcademicaFragment : Fragment() {
         ciclosLiveData!!.observe(this, ciclo)
     }
 
+    private fun observerGrupoUnico(){
+        val observer: Observer<Grupo> = object : Observer<Grupo> {
+            @Override
+            override fun onChanged(@Nullable grupo: Grupo?) {
+                val grupoDetalle = GrupoDetalleFragment()
+                var bundle =  Bundle();
+                bundle.putSerializable("Grupo", grupo)
+                grupoDetalle.arguments=bundle
+                activity!!.supportFragmentManager.beginTransaction().replace(R.id.fragment_container, grupoDetalle).commit()
+            }
+        }
+        grupoAdapter.gruposLiveData.observe(this, observer)
+    }
+
     private fun observerGrupos() {
         val grupo: Observer<List<Grupo>> = object : Observer<List<Grupo>> {
             @Override
@@ -174,6 +186,7 @@ class OfertaAcademicaFragment : Fragment() {
 
         cicloAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerCiclo.adapter = cicloAdapter
+        observerGrupoUnico()
     }
 
     private fun updateViewGrupos() {
@@ -182,5 +195,6 @@ class OfertaAcademicaFragment : Fragment() {
         recyclerView.setHasFixedSize(true)
         recyclerView.setLayoutManager(LinearLayoutManager(context!!))
         recyclerView.adapter = grupoAdapter
+        observerGrupoUnico()
     }
 }

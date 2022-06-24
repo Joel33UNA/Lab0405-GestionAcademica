@@ -98,6 +98,7 @@
         <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-GestionAcademica/app/src/main/res/layout/content_main.xml" value="0.27807971014492755" />
         <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-GestionAcademica/app/src/main/res/layout/fragment_ciclos.xml" value="0.33" />
         <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-GestionAcademica/app/src/main/res/layout/fragment_estudiantes.xml" value="0.33242753623188404" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-GestionAcademica/app/src/main/res/layout/fragment_grupo_detalle.xml" value="0.25" />
         <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-GestionAcademica/app/src/main/res/layout/fragment_historial_academico.xml" value="0.22395833333333334" />
         <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-GestionAcademica/app/src/main/res/layout/fragment_informacion.xml" value="0.22395833333333334" />
         <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-GestionAcademica/app/src/main/res/layout/fragment_matricular.xml" value="0.25" />
@@ -105,7 +106,7 @@
         <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-GestionAcademica/app/src/main/res/layout/fragment_oferta_academica.xml" value="0.27807971014492755" />
         <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-GestionAcademica/app/src/main/res/layout/list_ciclos.xml" value="0.22395833333333334" />
         <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-GestionAcademica/app/src/main/res/layout/list_estudiantes.xml" value="0.5" />
-        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-GestionAcademica/app/src/main/res/layout/list_grupos.xml" value="0.22395833333333334" />
+        <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-GestionAcademica/app/src/main/res/layout/list_grupos.xml" value="0.1" />
         <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-GestionAcademica/app/src/main/res/layout/list_grupos_matricula.xml" value="0.5" />
         <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-GestionAcademica/app/src/main/res/layout/list_matriculas.xml" value="0.27807971014492755" />
       </map>

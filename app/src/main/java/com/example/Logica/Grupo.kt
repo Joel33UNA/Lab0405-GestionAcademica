@@ -1,6 +1,8 @@
 package com.example.lab04_frontend.Logica
 
-class Grupo {
+import java.io.Serializable
+
+class Grupo : Serializable{
     var codigo = 0
     var horario: String? = null
     var curso: Curso? = null

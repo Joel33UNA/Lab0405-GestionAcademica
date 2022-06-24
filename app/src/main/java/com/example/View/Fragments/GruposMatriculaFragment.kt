@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
@@ -57,22 +58,27 @@ class GruposMatriculaFragment : Fragment() {
         return view
     }
 
+
+
     private fun initGrupos(){
         var dir = IPAddress()
         val retrofit = Retrofit.Builder().baseUrl(dir.getDireccion())
             .addConverterFactory(GsonConverterFactory.create()).build()
 
-        CoroutineScope(Dispatchers.IO).launch {
-            val call = retrofit.create(GrupoApi::class.java)
-            val request = call.getGruposCiclos(estudiante.carrera!!.codigo, ciclo.codigo)
-            val response = request.body() as ArrayList<Grupo>
-            if(request.isSuccessful){
-                withContext(Dispatchers.Main) {
-                    gruposLiveData!!.value = response
+        try {
+            CoroutineScope(Dispatchers.IO).launch {
+                val call = retrofit.create(GrupoApi::class.java)
+                val request = call.getGruposCiclos(estudiante.carrera!!.codigo, ciclo.codigo)
+                val response = request.body() as ArrayList<Grupo>
+                if(request.isSuccessful){
+                    withContext(Dispatchers.Main) {
+                        gruposLiveData!!.value = response
+                    }
                 }
-            }else{
-                Toast.makeText(context!!, "Error al mostrar los grupos", Toast.LENGTH_SHORT).show()
             }
+        }
+        catch(exception: java.lang.Exception){
+            Toast.makeText(context!!, "Error al mostrar los grupos", Toast.LENGTH_SHORT).show()
         }
     }
 
