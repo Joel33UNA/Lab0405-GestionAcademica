@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.SearchView
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.lifecycle.MutableLiveData
@@ -47,6 +49,7 @@ class CursosFragment : Fragment() {
         this.cursoAdapter = CursoAdapter(listaCursos, context!!)
 
         initCursos()
+        initCursoUnico()
         observer()
 
         val searchView = view!!.findViewById<SearchView>(R.id.searchCursos)
@@ -79,6 +82,32 @@ class CursosFragment : Fragment() {
         })
 
         return view
+    }
+
+    private fun initCursoUnico() {
+        val curso: Observer<Curso> = object : Observer<Curso> {
+            @Override
+            override fun onChanged(@Nullable curso: Curso?) {
+                var dir = IPAddress()
+                val retrofit = Retrofit.Builder().baseUrl(dir.getDireccion())
+                    .addConverterFactory(GsonConverterFactory.create()).build()
+                CoroutineScope(Dispatchers.IO).launch {
+                    try {
+                        val call = retrofit.create(CursoApi::class.java)
+                        val request = call.delete(curso!!.codigo)
+                        if (request.isSuccessful) {
+                            withContext(Dispatchers.Main) {
+                                initCursos()
+                            }
+                        }
+                    }
+                    catch (exception: Exception) {
+                        Toast.makeText(context!!, "Error al eliminar el curso", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        }
+        cursoAdapter.cursoLiveData!!.observe(this, curso)
     }
 
     private fun observer() {
@@ -118,5 +147,6 @@ class CursosFragment : Fragment() {
         recyclerView.setHasFixedSize(true)
         recyclerView.setLayoutManager(LinearLayoutManager(context!!))
         recyclerView.adapter = cursoAdapter
+        initCursoUnico()
     }
 }
