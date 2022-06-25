@@ -136,6 +136,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             nav_menu.findItem(R.id.nav_historial_academico).isVisible = true
         }
         else{
+            nav_menu.findItem(R.id.nav_informacion).isVisible = false
             nav_menu.findItem(R.id.nav_home).isVisible = false
             nav_menu.findItem(R.id.nav_ciclos).isVisible = false
             nav_menu.findItem(R.id.nav_carreras).isVisible = false
