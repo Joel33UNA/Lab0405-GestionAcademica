@@ -63,6 +63,12 @@
                 />
             </LinearLayout>
         </RelativeLayout>
+        <Button
+                android:text="Agregar curso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/agregarCursoBtn"
+                android:layout_margin="5dp"
+                android:backgroundTint="#00BCD4"/>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

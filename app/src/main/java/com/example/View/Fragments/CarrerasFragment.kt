@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SearchView
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.lifecycle.MutableLiveData
@@ -17,6 +18,7 @@ import com.example.View.Adapter.CarreraAdapter
 import com.example.View.R
 import com.example.lab04_frontend.Logica.Carrera
 import com.example.lab04_frontend.Logica.Ciclo
+import com.example.lab04_frontend.Logica.Estudiante
 import com.example.lab04_frontend.Logica.IPAddress
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -44,6 +46,7 @@ class CarrerasFragment : Fragment() {
         this.carreraAdapter = CarreraAdapter(listaCarreras, context!!)
         initCarreras()
         observer()
+        observerCarreraUnica()
 
         val searchView = view!!.findViewById<SearchView>(R.id.searchCarreras)
         searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
@@ -107,11 +110,26 @@ class CarrerasFragment : Fragment() {
         carrerasLiveData!!.observe(this, ciclo)
     }
 
+    private fun observerCarreraUnica(){
+        val carrera: Observer<Carrera> = object : Observer<Carrera> {
+            @Override
+            override fun onChanged(@Nullable carrera: Carrera?) {
+                val matricular = AgregarCursoFragment()
+                var bundle =  Bundle();
+                bundle.putSerializable("Carrera", carrera)
+                matricular.arguments=bundle
+                activity!!.supportFragmentManager.beginTransaction().replace(R.id.fragment_container, matricular).commit()
+            }
+        }
+        carreraAdapter.carreraLiveData!!.observe(this, carrera)
+    }
+
     private fun updateView() {
         this.carreraAdapter = CarreraAdapter(listaCarreras, context!!)
         val recyclerView = view!!.findViewById<RecyclerView>(R.id.recyclerCarreras)
         recyclerView.setHasFixedSize(true)
         recyclerView.setLayoutManager(LinearLayoutManager(context!!))
         recyclerView.adapter = carreraAdapter
+        observerCarreraUnica()
     }
 }

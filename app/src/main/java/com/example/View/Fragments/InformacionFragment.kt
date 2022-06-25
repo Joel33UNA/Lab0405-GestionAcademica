@@ -63,18 +63,22 @@ class InformacionFragment : Fragment() {
         val retrofit = Retrofit.Builder().baseUrl(dir.getDireccion())
             .addConverterFactory(GsonConverterFactory.create()).build()
 
-        CoroutineScope(Dispatchers.IO).launch {
-            val call = retrofit.create(ProfesorApi::class.java)
-            val request = call.get(usuario.cedula)
-            val response = request.body() as Profesor
-            if(request.isSuccessful){
-                withContext(Dispatchers.Main) {
-                    profesorLiveData!!.value = response
+        try{
+            CoroutineScope(Dispatchers.IO).launch {
+                val call = retrofit.create(ProfesorApi::class.java)
+                val request = call.get(usuario.cedula)
+                val response = request.body() as Profesor
+                if(request.isSuccessful){
+                    withContext(Dispatchers.Main) {
+                        profesorLiveData!!.value = response
+                    }
                 }
-            }else{
-                Toast.makeText(context!!, "Error al mostrar el profesor", Toast.LENGTH_SHORT).show()
             }
         }
+        catch(exception:Exception){
+            Toast.makeText(context!!, "Error al mostrar el profesor", Toast.LENGTH_SHORT).show()
+        }
+
     }
 
     private fun initEstudiante(){
