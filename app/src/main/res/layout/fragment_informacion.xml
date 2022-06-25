@@ -8,25 +8,61 @@
                                                    tools:layout_editor_absoluteY="156dp"
                                                    tools:layout_editor_absoluteX="13dp">
     <TextView
-            android:text="Título de carrera"
-            android:textStyle="bold"
+            android:text="Carrera"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textViewTituloCarreraText"
-            android:textSize="24sp"
-            app:layout_constraintTop_toBottomOf="@+id/textViewCedula"
-            android:layout_marginTop="40dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/textViewTituloCarrera"/>
-    <TextView
-            android:text="Fecha de nacimiento"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textViewFechaNacimientoText"
-            android:textSize="24sp"
-            app:layout_constraintTop_toBottomOf="@+id/textViewCorreo"
-            android:layout_marginTop="20dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content" android:id="@+id/textViewCarrera"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/textViewFechaNacimiento"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCarreraText"
+            app:layout_constraintBottom_toTopOf="@+id/textViewTituloCarreraText"/>
+    <TextView
+            android:text="Nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textViewNombre"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNombreText"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textViewTelefonoText"
+            app:layout_constraintHorizontal_bias="0.483" app:layout_constraintVertical_bias="0.0"
+    />
+    <TextView
+            android:text="Cédula"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textViewCedulaText"
+            android:textSize="24sp" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textViewCedula" app:layout_constraintVertical_bias="0.51"
+            android:layout_marginTop="20dp" app:layout_constraintHorizontal_bias="0.479"/>
+    <TextView
+            android:text="Teléfono"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textViewTelefonoText"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/textViewNombre"
+            app:layout_constraintBottom_toTopOf="@+id/textViewTelefono"/>
+    <TextView
+            android:text="Correo Electrónico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textViewCorreo"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCorreoText"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textViewFechaNacimientoText"
+            app:layout_constraintHorizontal_bias="0.477"/>
+    <TextView
+            android:text="Carrera"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textViewCarreraText"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.498" android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFechaNacimiento"
+            app:layout_constraintBottom_toTopOf="@+id/textViewCarrera"/>
     <TextView
             android:text="Correo electrónico"
             android:textStyle="bold"
@@ -36,46 +72,7 @@
             android:layout_marginTop="20dp"
             app:layout_constraintTop_toBottomOf="@+id/textViewTelefono"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/textViewCorreo"/>
-    <TextView
-            android:text="Carrera"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textViewCarreraText"
-            android:textSize="24sp"
-            app:layout_constraintTop_toBottomOf="@+id/textViewFechaNacimiento"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginBottom="1dp" app:layout_constraintBottom_toTopOf="@+id/textViewCedula"/>
-    <TextView
-            android:text="Nombre"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textViewNombreText"
-            android:textSize="24sp"
-            app:layout_constraintTop_toBottomOf="@+id/textViewCedulaText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/textViewCedula" android:layout_marginTop="20dp"
-            app:layout_constraintVertical_bias="0.100000024"/>
-    <TextView
-            android:text="Cédula"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textViewCedulaText"
-            android:textSize="24sp" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/textViewCedula" app:layout_constraintVertical_bias="0.13999999"/>
-    <TextView
-            android:text="Teléfono"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textViewTelefonoText"
-            android:textSize="24sp"
-            app:layout_constraintTop_toBottomOf="@+id/textViewCedula"
-            android:layout_marginTop="20dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/textViewTelefono"/>
+            app:layout_constraintBottom_toTopOf="@+id/textViewCorreo" app:layout_constraintHorizontal_bias="0.471"/>
     <TextView
             android:text="Cédula"
             android:layout_width="wrap_content"
@@ -83,48 +80,63 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewCedulaText"
-            app:layout_constraintBottom_toTopOf="@+id/textViewNombreText"/>
+            app:layout_constraintBottom_toTopOf="@+id/textViewNombreText"
+            app:layout_constraintHorizontal_bias="0.48"/>
     <TextView
-            android:text="Nombre"
+            android:text="Fecha de nacimiento"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textViewCedula"
-            app:layout_constraintTop_toBottomOf="@+id/textViewNombreText"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/textViewTelefonoText"/>
-    <TextView
-            android:text="Teléfono"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textViewTelefono"
-            app:layout_constraintTop_toBottomOf="@+id/textViewTelefonoText"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/textViewCorreoText"/>
-    <TextView
-            android:text="Correo Electrónico"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textViewCorreo"
-            app:layout_constraintTop_toBottomOf="@+id/textViewCorreoText"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/textViewFechaNacimientoText"/>
+            android:layout_height="wrap_content" android:id="@+id/textViewFechaNacimientoText"
+            android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCorreo"
+            android:layout_marginTop="20dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textViewFechaNacimiento"
+            app:layout_constraintHorizontal_bias="0.465"/>
     <TextView
             android:text="Fecha de nacimiento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textViewFechaNacimiento"
-            app:layout_constraintTop_toBottomOf="@+id/textViewFechaNacimientoText"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFechaNacimientoText"
             app:layout_constraintBottom_toTopOf="@+id/textViewCarreraText"/>
     <TextView
-            android:text="Carrera"
+            android:text="Teléfono"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textViewCedula"
-            app:layout_constraintTop_toBottomOf="@+id/textViewCarreraText" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content" android:id="@+id/textViewTelefono"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.477"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTelefonoText"
+            app:layout_constraintBottom_toTopOf="@+id/textViewCorreoText"/>
+    <TextView
+            android:text="Nombre"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textViewNombreText"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/textViewTituloCarreraText"/>
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCedula" android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewNombre"/>
+    <TextView
+            android:text="Título de carrera"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textViewTituloCarreraText"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCarrera"
+            app:layout_constraintBottom_toTopOf="@+id/textViewTituloCarrera"/>
     <TextView
             android:text="Título de carrera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textViewTituloCarrera"
-            app:layout_constraintTop_toBottomOf="@+id/textViewTituloCarreraText" android:layout_marginEnd="157dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="152dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTituloCarreraText"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="50dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

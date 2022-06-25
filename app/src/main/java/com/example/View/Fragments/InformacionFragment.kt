@@ -123,14 +123,14 @@ class InformacionFragment : Fragment() {
     }
 
     private fun updateView() {
-        val textViewCedula = view!!.findViewById<TextView>(R.id.textViewCedulaText)
-        val textViewNombre = view!!.findViewById<TextView>(R.id.textViewCedula)
+        val textViewCedula = view!!.findViewById<TextView>(R.id.textViewCedula)
+        val textViewNombre = view!!.findViewById<TextView>(R.id.textViewNombre)
         val textViewTelefono = view!!.findViewById<TextView>(R.id.textViewTelefono)
         val textViewCorreo = view!!.findViewById<TextView>(R.id.textViewCorreo)
         val textViewFechaNacimiento = view!!.findViewById<TextView>(R.id.textViewFechaNacimiento)
         val textViewFechaNacimientoText = view!!.findViewById<TextView>(R.id.textViewFechaNacimientoText)
         val textViewCarreraText = view!!.findViewById<TextView>(R.id.textViewCarreraText)
-        val textViewCarrera = view!!.findViewById<TextView>(R.id.textViewCedula)
+        val textViewCarrera = view!!.findViewById<TextView>(R.id.textViewCarrera)
         val textViewTituloCarreraText = view!!.findViewById<TextView>(R.id.textViewTituloCarreraText)
         val textViewTituloCarrera = view!!.findViewById<TextView>(R.id.textViewTituloCarrera)
 
