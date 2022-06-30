@@ -14,8 +14,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.Data.GrupoApi
 import com.example.Data.MatriculaApi
-import com.example.View.Adapter.EstudianteAdapter
 import com.example.View.Adapter.GruposMatriculaAdapter
+import com.example.View.Adapter.GruposMatriculadosAdapter
 import com.example.View.R
 import com.example.lab04_frontend.Logica.*
 import kotlinx.coroutines.CoroutineScope
@@ -28,10 +28,13 @@ import retrofit2.converter.gson.GsonConverterFactory
 class GruposMatriculaFragment : Fragment() {
 
     private var listaGrupos = ArrayList<Grupo>()
+    private var listaGruposMatriculados = ArrayList<Matricula>()
     private lateinit var estudiante: Estudiante
     private lateinit var ciclo: Ciclo
     private lateinit var gruposLiveData: MutableLiveData<List<Grupo>>
     private lateinit var gruposMatriculaAdapter: GruposMatriculaAdapter
+    private lateinit var matriculasLiveData: MutableLiveData<List<Matricula>>
+    private lateinit var matriculasAdapter: GruposMatriculadosAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,10 +51,14 @@ class GruposMatriculaFragment : Fragment() {
 
         this.gruposLiveData = MutableLiveData()
         this.gruposMatriculaAdapter = GruposMatriculaAdapter(listaGrupos, context!!)
+        this.matriculasLiveData = MutableLiveData()
+        this.matriculasAdapter = GruposMatriculadosAdapter(listaGruposMatriculados, context!!)
 
         initGrupos()
         observerGrupos()
         observerGrupoMatricula()
+        initGruposMatriculados()
+        observerGruposMatriculados()
 
         return view
     }
@@ -71,6 +78,28 @@ class GruposMatriculaFragment : Fragment() {
                 if(request.isSuccessful){
                     withContext(Dispatchers.Main) {
                         gruposLiveData!!.value = response
+                    }
+                }
+            }
+        }
+        catch(exception: java.lang.Exception){
+            Toast.makeText(context!!, "Error al mostrar los grupos", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun initGruposMatriculados(){
+        var dir = IPAddress()
+        val retrofit = Retrofit.Builder().baseUrl(dir.getDireccion())
+            .addConverterFactory(GsonConverterFactory.create()).build()
+
+        try {
+            CoroutineScope(Dispatchers.IO).launch {
+                val call = retrofit.create(MatriculaApi::class.java)
+                val request = call.get(estudiante.cedula)
+                val response = request.body() as ArrayList<Matricula>
+                if(request.isSuccessful){
+                    withContext(Dispatchers.Main) {
+                        matriculasLiveData!!.value = response
                     }
                 }
             }
@@ -120,6 +149,17 @@ class GruposMatriculaFragment : Fragment() {
         gruposMatriculaAdapter.gruposLiveData.observe(this, observer)
     }
 
+    private fun observerGruposMatriculados(){
+        val observer: Observer<List<Matricula>> = object : Observer<List<Matricula>> {
+
+            override fun onChanged(@Nullable matriculas: List<Matricula>?) {
+                listaGruposMatriculados = matriculas as ArrayList<Matricula>
+                updateViewMatriculados()
+            }
+        }
+        matriculasLiveData.observe(this, observer)
+    }
+
     fun updateViewGrupos(){
         this.gruposMatriculaAdapter = GruposMatriculaAdapter(listaGrupos, context!!)
         val recyclerView = view!!.findViewById<RecyclerView>(R.id.recyclerGruposMatricula)
@@ -127,5 +167,13 @@ class GruposMatriculaFragment : Fragment() {
         recyclerView.setLayoutManager(LinearLayoutManager(context!!))
         recyclerView.adapter = gruposMatriculaAdapter
         observerGrupoMatricula()
+    }
+
+    fun updateViewMatriculados(){
+        this.matriculasAdapter = GruposMatriculadosAdapter(listaGruposMatriculados, context!!)
+        val recyclerView = view!!.findViewById<RecyclerView>(R.id.recyclerViewGruposMatriculados)
+        recyclerView.setHasFixedSize(true)
+        recyclerView.setLayoutManager(LinearLayoutManager(context!!))
+        recyclerView.adapter = matriculasAdapter
     }
 }

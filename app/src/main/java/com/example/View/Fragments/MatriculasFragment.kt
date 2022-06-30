@@ -49,6 +49,7 @@ class MatriculasFragment : Fragment() {
         this.matriculaAdapter = MatriculaAdapter(listaMatriculas, context!!)
 
         initMatriculas()
+        initMatriculaUnica()
         observer()
 
         val searchView = view!!.findViewById<SearchView>(R.id.searchMatriculas)
@@ -104,6 +105,21 @@ class MatriculasFragment : Fragment() {
         }
     }
 
+    private fun initMatriculaUnica(){
+        val matricula: Observer<Matricula> = object : Observer<Matricula> {
+            @Override
+            override fun onChanged(@Nullable matricula: Matricula) {
+                val estudiantesGrupoFragment = EstudiantesGrupoFragment()
+                var bundle =  Bundle();
+                bundle.putSerializable("Matricula", matricula)
+                estudiantesGrupoFragment.arguments=bundle
+                activity!!.supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                    estudiantesGrupoFragment).commit()
+            }
+        }
+        matriculaAdapter.matriculaLiveData.observe(this, matricula)
+    }
+
     private fun observer() {
         val matricula: Observer<List<Matricula>> = object : Observer<List<Matricula>> {
             @Override
@@ -121,5 +137,6 @@ class MatriculasFragment : Fragment() {
         recyclerView.setHasFixedSize(true)
         recyclerView.setLayoutManager(LinearLayoutManager(context!!))
         recyclerView.adapter = matriculaAdapter
+        initMatriculaUnica()
     }
 }

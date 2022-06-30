@@ -1,6 +1,6 @@
 package com.example.lab04_frontend.Logica
 
-class Curso {
+class Curso : java.io.Serializable{
     var codigo = 0
     var nombre: String? = null
     var creditos = 0

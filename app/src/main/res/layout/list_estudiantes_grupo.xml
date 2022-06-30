@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/listCursos"
+        android:id="@+id/listEstudiantes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:animateLayoutChanges="true"
@@ -19,16 +19,6 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:padding="12dp">
-            <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:id="@+id/imageCurso"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center"
-                    android:paddingLeft="14dp"
-                    android:paddingRight="14dp"
-                    app:srcCompat="@drawable/ic_menu_book_black_24dp"/>
             <LinearLayout
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
@@ -36,23 +26,21 @@
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="2dp"
-                    android:layout_toEndOf="@+id/imageCurso"
                     android:orientation="vertical"
-                    android:layout_marginLeft="4dp"
-                    android:layout_toRightOf="@+id/imageCurso">
+                    android:layout_marginLeft="4dp">
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/nombreCurso"
+                        android:id="@+id/nombreEstudiante"
                         android:layout_marginBottom="2dp"
                         android:textColor="@color/black"
-                        android:text="Cursos"
+                        android:text="Nombre"
                         android:textStyle="bold"
                         android:textSize="18sp"/>
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/codigoCurso"
+                        android:id="@+id/cedulaEstudiante"
                         android:text="1"
                         android:textSize="18sp"/>
                 <TextView
@@ -63,47 +51,72 @@
                         android:id="@+id/nombreCarrera"/>
             </LinearLayout>
             <TextView
-                    android:text="Créditos:"
+                    android:text="Nacimiento:"
                     android:textStyle="bold"
                     android:layout_width="87dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/creditosCursoText"
+                    android:id="@+id/fechaNacimientoText"
                     android:layout_toEndOf="@+id/linearLayout"
                     android:layout_marginStart="15dp"
-                    android:layout_toStartOf="@+id/creditosCurso"/>
+                    android:layout_toStartOf="@+id/fechaNacimiento"/>
             <TextView
-                    android:id="@+id/creditosCurso"
-                    android:text="1"
+                    android:id="@+id/fechaNacimiento"
+                    android:text="1/1/2000"
+                    android:textSize="11dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_marginStart="1dp"
-                    android:layout_marginEnd="36dp"/>
+                    android:layout_marginEnd="10dp"/>
             <TextView
-                    android:text="Horas semanales:"
+                    android:text="Teléfono:"
                     android:textStyle="bold"
                     android:layout_width="87dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/fechaFinalText"
+                    android:id="@+id/telefonoEstudianteText"
                     android:layout_toEndOf="@+id/linearLayout"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="30dp"
-                    android:layout_toStartOf="@+id/horasSemanalesCurso"/>
+                    android:layout_toStartOf="@+id/telefonoEstudiante"/>
             <TextView
-                    android:id="@+id/horasSemanalesCurso"
-                    android:text="1"
+                    android:id="@+id/telefonoEstudiante"
+                    android:text="88888888"
+                    android:textSize="11dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_marginStart="1dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginEnd="36dp"/>
+                    android:layout_marginEnd="10dp"/>
+            <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/correoEstudianteText"
+                    android:text="Correo:"
+                    android:textStyle="bold"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@+id/linearLayout"
+                    android:layout_toStartOf="@id/correoEstudiante"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/correoEstudiante"
+                    android:text="correo@email.com:"
+                    android:textSize="11dp"
+                    android:textStyle="bold"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginStart="1dp"/>
         </RelativeLayout>
         <Button
-                android:text="Agregar Grupo"
+                android:id="@+id/agregarNotaBtn"
+                android:text="Agregar nota"
+                android:layout_margin="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/agregarGrupoBtn" android:backgroundTint="#17a2b8"
-                android:layout_margin="3dp"/>
+                android:layout_height="match_parent"
+                android:backgroundTint="#2196F3"/>
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

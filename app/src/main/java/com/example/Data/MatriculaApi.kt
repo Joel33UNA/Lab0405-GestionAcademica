@@ -12,7 +12,7 @@ interface MatriculaApi {
     suspend fun getMatriculaAll(): Response<ArrayList<Matricula>>
 
     @GET("matriculas/{cedula}")
-    suspend fun get(@Path("cedula")cedula: Int): Response<ArrayList<Matricula>>?
+    suspend fun get(@Path("cedula")cedula: Int): Response<ArrayList<Matricula>>
 
     @POST("matriculas")
     suspend fun add(@Body matricula: Matricula): Response<Void>

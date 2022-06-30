@@ -16,7 +16,7 @@ class Grupo : Serializable{
         curso: Curso,
         ciclo: Ciclo,
         profesor: Profesor,
-        estudiantes: ArrayList<Estudiante>
+        estudiantes: ArrayList<Estudiante>?
     ) {
         this.codigo = codigo
         this.horario = horario

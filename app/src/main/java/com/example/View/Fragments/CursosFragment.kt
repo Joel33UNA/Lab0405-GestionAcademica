@@ -88,23 +88,12 @@ class CursosFragment : Fragment() {
         val curso: Observer<Curso> = object : Observer<Curso> {
             @Override
             override fun onChanged(@Nullable curso: Curso?) {
-                var dir = IPAddress()
-                val retrofit = Retrofit.Builder().baseUrl(dir.getDireccion())
-                    .addConverterFactory(GsonConverterFactory.create()).build()
-                CoroutineScope(Dispatchers.IO).launch {
-                    try {
-                        val call = retrofit.create(CursoApi::class.java)
-                        val request = call.delete(curso!!.codigo)
-                        if (request.isSuccessful) {
-                            withContext(Dispatchers.Main) {
-                                initCursos()
-                            }
-                        }
-                    }
-                    catch (exception: Exception) {
-                        Toast.makeText(context!!, "Error al eliminar el curso", Toast.LENGTH_SHORT).show()
-                    }
-                }
+                val agregarGrupoFragment = AgregarGrupoFragment()
+                var bundle =  Bundle();
+                bundle.putSerializable("Curso", curso)
+                agregarGrupoFragment.arguments=bundle
+                activity!!.supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                    agregarGrupoFragment).commit()
             }
         }
         cursoAdapter.cursoLiveData!!.observe(this, curso)

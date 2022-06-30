@@ -2,10 +2,7 @@ package com.example.Data
 
 import com.example.lab04_frontend.Logica.Grupo
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.PUT
-import retrofit2.http.Path
+import retrofit2.http.*
 
 interface GrupoApi {
     @GET("grupos/{codigoCarrera}/{codigoCiclo}")
@@ -13,4 +10,7 @@ interface GrupoApi {
 
     @PUT("grupos")
     suspend fun update(@Body grupo: Grupo): Response<Void>
+
+    @POST("grupos")
+    suspend fun add(@Body grupo:Grupo): Response<Void>
 }

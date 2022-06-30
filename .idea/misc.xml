@@ -60,6 +60,24 @@
         <entry key="..\:/Users/joeli/Desktop/Lab0405-Frontend/app/src/main/res/layout/list_ciclos.xml" value="0.25679347826086957" />
         <entry key="..\:/Users/joeli/Desktop/Lab0405-Frontend/app/src/main/res/layout/list_cursos.xml" value="0.17395833333333333" />
         <entry key="..\:/Users/joeli/Desktop/Lab0405-Frontend/app/src/main/res/layout/list_grupos.xml" value="0.23324275362318841" />
+        <entry key="..\:/Users/joeli/Downloads/Lab0405-GestionAcademica/app/src/main/res/layout/content_main.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/joeli/Downloads/Lab0405-GestionAcademica/app/src/main/res/layout/fragment_agregar_curso.xml" value="0.21739130434782608" />
+        <entry key="..\:/Users/joeli/Downloads/Lab0405-GestionAcademica/app/src/main/res/layout/fragment_agregar_grupo.xml" value="0.21557971014492755" />
+        <entry key="..\:/Users/joeli/Downloads/Lab0405-GestionAcademica/app/src/main/res/layout/fragment_cursos.xml" value="0.21739130434782608" />
+        <entry key="..\:/Users/joeli/Downloads/Lab0405-GestionAcademica/app/src/main/res/layout/fragment_estudiantes.xml" value="0.33" />
+        <entry key="..\:/Users/joeli/Downloads/Lab0405-GestionAcademica/app/src/main/res/layout/fragment_estudiantes_grupo.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/joeli/Downloads/Lab0405-GestionAcademica/app/src/main/res/layout/fragment_grupo_detalle.xml" value="0.21739130434782608" />
+        <entry key="..\:/Users/joeli/Downloads/Lab0405-GestionAcademica/app/src/main/res/layout/fragment_informacion.xml" value="0.21739130434782608" />
+        <entry key="..\:/Users/joeli/Downloads/Lab0405-GestionAcademica/app/src/main/res/layout/fragment_matricular.xml" value="0.21739130434782608" />
+        <entry key="..\:/Users/joeli/Downloads/Lab0405-GestionAcademica/app/src/main/res/layout/fragment_matriculas.xml" value="0.21739130434782608" />
+        <entry key="..\:/Users/joeli/Downloads/Lab0405-GestionAcademica/app/src/main/res/layout/fragment_oferta_academica.xml" value="0.21739130434782608" />
+        <entry key="..\:/Users/joeli/Downloads/Lab0405-GestionAcademica/app/src/main/res/layout/fragment_ver_estudiantes.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/joeli/Downloads/Lab0405-GestionAcademica/app/src/main/res/layout/list_cursos.xml" value="0.21557971014492755" />
+        <entry key="..\:/Users/joeli/Downloads/Lab0405-GestionAcademica/app/src/main/res/layout/list_estudiantes.xml" value="0.33" />
+        <entry key="..\:/Users/joeli/Downloads/Lab0405-GestionAcademica/app/src/main/res/layout/list_estudiantes_grupo.xml" value="0.3515625" />
+        <entry key="..\:/Users/joeli/Downloads/Lab0405-GestionAcademica/app/src/main/res/layout/list_grupos_matricula.xml" value="0.21557971014492755" />
+        <entry key="..\:/Users/joeli/Downloads/Lab0405-GestionAcademica/app/src/main/res/layout/list_matriculados.xml" value="0.5" />
+        <entry key="..\:/Users/joeli/Downloads/Lab0405-GestionAcademica/app/src/main/res/layout/list_matriculas.xml" value="0.21557971014492755" />
         <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.36875" />
         <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/drawable/background.xml" value="0.36875" />
         <entry key="..\:/Users/joeli/OneDrive - Universidad Nacional de Costa Rica/UNA/Diseno y Programacion de Plataformas Moviles/Labs/Lab0405-Frontend/app/src/main/res/drawable/custom_image_button.xml" value="0.36875" />

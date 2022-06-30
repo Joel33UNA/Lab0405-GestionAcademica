@@ -57,7 +57,7 @@ class CursoAdapter(var cursos: ArrayList<Curso>, var context: Context) :
             this.nombreCarrera = view.findViewById(R.id.nombreCarrera)
             this.creditosCurso = view.findViewById(R.id.creditosCurso)
             this.horasSemanalesCurso = view.findViewById(R.id.horasSemanalesCurso)
-            this.borrarCursoBtn = view.findViewById(R.id.borrarCursoBtn)
+            this.borrarCursoBtn = view.findViewById(R.id.agregarGrupoBtn)
         }
 
         fun bindData(curso: Curso){

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".Fragments.GrupoDetalleFragment">
+    <Spinner
+            android:layout_width="249dp"
+            android:layout_height="22dp" android:id="@+id/spinnerProfesores"
+            android:layout_marginEnd="28dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="37dp"
+            app:layout_constraintStart_toEndOf="@+id/textViewProfesorText" android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerCiclos"/>
+    <TextView
+            android:text="Profesor:"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textViewProfesorText"
+            android:textSize="16sp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCicloText" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="30dp" app:layout_constraintEnd_toStartOf="@+id/spinnerProfesores"
+    />
+    <TextView
+            android:text="Ciclo:"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textViewCicloText"
+            android:textSize="16sp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/editTextHorario" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="30dp" app:layout_constraintEnd_toStartOf="@+id/spinnerCiclos"
+    />
+    <TextView
+            android:text="Curso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textViewCurso"
+            android:textSize="16sp"
+            android:layout_marginEnd="141dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/editTextHorario" android:layout_marginStart="75dp"
+            app:layout_constraintStart_toEndOf="@+id/textViewCursoText" android:layout_marginBottom="20dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="132dp"/>
+    <TextView
+            android:text="Curso:"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textViewCursoText"
+            android:textSize="16sp" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="30dp"
+            app:layout_constraintEnd_toStartOf="@+id/textViewCurso"
+            app:layout_constraintBottom_toTopOf="@+id/editTextHorario" android:layout_marginBottom="20dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="132dp"/>
+    <EditText
+            android:layout_width="367dp"
+            android:layout_height="46dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editTextHorario"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp" android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent" android:hint="Horario"
+            app:layout_constraintBottom_toTopOf="@+id/textViewCicloText"/>
+    <Spinner
+            android:layout_width="249dp"
+            android:layout_height="22dp" android:id="@+id/spinnerCiclos"
+            android:layout_marginTop="30dp" app:layout_constraintTop_toBottomOf="@+id/editTextHorario"
+            android:layout_marginStart="62dp" app:layout_constraintStart_toEndOf="@+id/textViewCicloText"
+            android:layout_marginEnd="29dp" app:layout_constraintEnd_toEndOf="parent"/>
+    <Button
+            android:text="Guardar grupo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/guardarGrupoBtn"
+            android:backgroundTint="#2196F3" android:layout_marginTop="120dp"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerProfesores" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="239dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
